@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "Sarvesh - Personal Site",
+  "version": "0.0.1",
+  "description": "A personal site using express and node.js on Heroku.",
   "engines": {
     "node": "6.11.1"
   },
@@ -20,12 +20,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/ssinghrour/ssingh"
   },
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "sarvesh"
   ],
-  "license": "MIT"
+  "license": "Open"
 }

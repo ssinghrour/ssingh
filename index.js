@@ -32,7 +32,7 @@ const allRouters = compose([Router.random(), Router.pi()]);
 app.use(allRouters);
 
 app.use(async ctx => {
-  ctx.body = 'Hello World from Sarvesh';
+  ctx.body = 'Hello World from Sample Koa App';
 });
 /**
 */

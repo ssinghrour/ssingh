@@ -5,6 +5,19 @@
 
 module.exports = {
   /**
+  * @description If path is '/' or '/home', return home page
+  */
+  home : function(){
+    return async function(ctx, next){
+      if('/' == ctx.path || '/home' == ctx.path){
+        ctx.body = 'You have reached home page';
+      }
+      else{
+        await next();
+      }
+    }
+  },
+  /**
   * @description If path is equal to '/random', return a random number
   */
   random : function(){
@@ -16,6 +29,9 @@ module.exports = {
       }
     }
   },
+  /**
+  * @description If path is equal to '/pi', value of pi
+  */
   pi : function(){
     return async function(ctx, next){
       if ('/pi' == ctx.path) {

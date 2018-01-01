@@ -8,7 +8,7 @@ module.exports = {
   * @yields {middleware}
   * @description Console.log HTTP method and URL
   */
-  consoleLog : function(format){
+  logMethod : function(format){
     format = format || ':method ":url"';
 
     return async function(ctx, next){
@@ -18,6 +18,19 @@ module.exports = {
       console.log(str);
 
       await next();
+    }
+  },
+  /** Method to console log every request method and url, uses promise
+  * @param {string} format
+  * @yields {middleware}
+  * @description Console.log HTTP method and URL
+  */
+  logTime : function(){
+    return async function(ctx, next){
+      const start = Date.now();
+      await next();
+      const ms = Date.now() - start;
+      console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
     }
   }
 }
